@@ -35,6 +35,7 @@ app.controller('ChatCtrl', function($scope, $http, socket){
    $scope.msgs =[];
    $scope.createUser = function(){
         socket.emit('create user', $scope.user.username);
+        $scope.play = $scope.user.username;
         $scope.user.username='';
         $scope.clicked = true;
     };
@@ -49,7 +50,7 @@ app.controller('ChatCtrl', function($scope, $http, socket){
     });
     socket.on('get users', function(data){
         console.log(data);
-        $scope.logged = $scope.user.username;
+        $scope.logged = data;
         $scope.users.push(data);
          $scope.$digest();
     })

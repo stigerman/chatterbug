@@ -19,7 +19,7 @@
     <div class="navbar-header">
       <a class="navbar-brand" href="#">Socket.io - Chatroom</a>
           <ul class="nav navbar-nav pull-right">
-            <li class="nav"><a href=".">Logged in as: {{logged.data}}</a>
+            <li class="nav"><a href=".">Logged in as: {{logged}} {{play}}</a>
             </li>
           </ul>
     </div>
@@ -28,7 +28,7 @@
 <div class="container">
     <div class="jumbotron">
     <div class="container"  ng-controller="ChatCtrl">
-        <h2>Welcome To The Chatroom <span> - {{logged.data}}</span></h2>
+        <h2>Welcome To The Chatroom <span> - {{logged}} {{play}}</span></h2>
     </div>
 </div>
 </div>
