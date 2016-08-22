@@ -49,7 +49,7 @@ app.controller('ChatCtrl', function($scope, $http, socket){
     });
     socket.on('get users', function(data){
         console.log(data);
-        $scope.logged = data;
+        $scope.logged = $scope.user.username;
         $scope.users.push(data);
          $scope.$digest();
     })
