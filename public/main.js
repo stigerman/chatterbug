@@ -19,7 +19,7 @@ var app = angular.module('chatApp', [])
 
 
 app.factory('socket', function(){
-    var socket = io.connect('https://chatterbug-stigerman.c9users.io');
+    var socket = io.connect('https://socketiochatroom.herokuapp.com/');
     return socket;
 })
 
